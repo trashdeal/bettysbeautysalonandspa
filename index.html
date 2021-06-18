@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<link rel="stylesheet" href="parlour/styles.css">
+		<link rel="icon" href="parlour/logo.png" type="image">
+		<title> Betty's Beauty Salon & Spa </title>
+		<meta charset= "UTF-8"/>
+		<meta name= "viewport" content="width=device-width,initial-scale=1.0"/>
+		<meta name="keywords" content="salon near me, beauty parlour, hair styling near me, salon margao, hair salon, hairdresser near me"/>
+		<meta name="description" content="Betty's Beauty Salon and Spa: One of South Goa's well known beauty salons with experienced beauticians and hair dressers at your service."/>
+		<meta name="author" content="Brendon Rodirgues"/>
+		<script src="parlour/jquery-3.4.1.js"></script>
+	</head>
+	<body>
+		<header id="home" class="home">
+			<section class="navbar">
+				<div class="logo">
+					<a href="#home"><img src="parlour/logo.png" alt="salon logo" title="salon logo" height="150px" width="150px" ></a>
+				</div>
+				<nav class="navlist">
+					<ul>
+						<li class="navlist-left"><a href="#home">Home</a></li>
+						<li class="navlist-left"><a href="#about">About</a></li>
+						<li class="navlist-left"><a href="#gallery">Gallery</a></li>
+						<li class="navlist-left" id="pl-button" onClick="openModal(event,this.id)"><a href="#home">Timings</a></li>
+						<li class="navlist-right" id="fb-button" onClick="openModal(event,this.id)"><a href="#home">Feedback</a></li>
+						<li class="navlist-right"><a href="#appointment">Appointment</a></li>
+						<li class="navlist-right"><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section>
+				<div id="main" class="main">
+					<h1>Reveal <span style="color:white;">Yourself. </span></h1>
+					<p>One of South Goa's well known beauty salons <br> with experienced beauticians and hair dressers <br>at your service.</p>
+					<div style="padding-left:180px;" class="main-option">
+						<a class="main-options" href="#about">Read More</a>
+						<a class="main-options" href="#appointment">Make an Appointment</a>
+					</div>
+				</div>
+			</section>
+			<a href="#home">
+				<button id="myBtn" title="Go to top">&uarr;</button>
+			</a>
+		</header>
+		<section id="about" class="about">
+			<article>
+				<img src="parlour/about.jpg" alt="Salon Enterence" title="Salon Enterence" class="about-img" >
+				<h1>About<span style="color:black;"> us</span> </h1>
+				<p>At <span style="color:white;">Betty's Beauty Salon & Spa</span>, not only do we pride ourselves in providing our clients with high quality hairdressing service, 
+					we also offer a wide range of beauty treatments- from indulgence treatments such as Facials and Pedicure & Manicure to express
+					beauty maintenance like Lashes, Eyebrow Shape & Tint, plus Hair Removal Waxing.</p>
+				<p>With 15 years of experience, Betty's beauty service is one you can trust. Our treatments are designed to highlight your natural beauty, health and wellbeing.</p>
+			</article>
+		</section>
+		<section class="appointment" id="appointment">
+			<h1> Make an <span style="color:#990033;"> Appointment!</span></h1>
+			<h3> Time to groom<br><span style="font-size:150px">yourself</span></h3> 
+			<article>
+				<form class="myForm" name="myForm1" onsubmit="return validateForm1()" > 
+					<p style="margin:0px; font-size:20px;">Name<span class="required">*</span></p>
+					<input type="name"  class="form_input1" name="formName" placeholder="Enter your Name"><br>
+					<p style="margin:0px; font-size:20px;">Mobile Number<span class="required">*</span></p>
+					<input type="number" step="0.01" class="form_input1" name="mobile-no" placeholder="Enter your Mobile Number"><br>
+					<p style="margin:0px; font-size:20px;">Email Address<span class="required">*</span></p>
+					<input type="no"  class="form_input1" name="email" placeholder="Enter your Email ID"><br>
+					<p style="margin:0px; font-size:20px;">Pick a day & approximate Time<span class="required">*</span></p>
+					<input type="date"  class="form_input2" name="formDate" placeholder="Appointment date" >
+					<input type="time"  class="form_input2" name="formTime" placeholder="Approximate time"><br>
+					<span class="form_submit">
+						<input type="submit" class="form_input3" name="formSubmit" value="Request My Appointment">
+					</span>
+				</form>	
+			</article>
+		</section>
+		<section id="fb_modal" class="modal">
+			<div class="modal_content-1">
+				<span class="close-1">&times;</span>
+				<h2 style="margin:0px; font-size:40px; color:#990033;">Feedback</h2>
+				<form name="myForm2" onsubmit="return validateForm2()"> 
+					<p style="margin:0px; font-size:20px;">Name<span class="required">*</span></p>
+					<input type="name"  class="form_input1"  name="formName" placeholder="Enter your Name" ><br>
+					<p style="margin:0px; font-size:20px;">Mobile Number<span class="required">*</span></p>
+					<input type="no"  class="form_input1"  name="mobile-no" placeholder="Enter your Mobile Number" ><br>
+					<p style="margin:0px; font-size:20px;">Message<span class="required">*</span></p>
+					<input type="text"  class="form_input4" name="message"  placeholder="Give us your feedback here!" ><br>
+					<span class="form_submit">
+						<input type="submit" class="form_input3" name="formSubmit"  value="Submit My Feedback!">
+					</span>
+				</form>
+			</div>
+		</section>
+		<section id="pl_modal" class="modal">
+			<div class="modal_content-2">
+				<span class="close-2">&times;</span>
+				<h1 style="font-size:40px; margin:0px;" >Our <span style="color:#990033;"> Timings</span></h1>
+				<table>
+					<tr>
+						<th>Monday</th>
+						<th>Tuesady</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+						<th>Saturday</th>
+						<th>Sunday</th>
+					</tr>
+					<tr>
+						<td>9:30 AM-1:30 PM</td>
+						<td>9:30 AM-1:30 PM</td>
+						<td>9:30 AM-1:30 PM</td>
+						<td>9:30 AM-1:30 PM</td>
+						<td>9:30 AM-1:30 PM</td>
+						<td>9:30 AM-1:30 PM</td>
+						<td><center>On Appointment</center></td>
+					</tr>
+					<tr>
+						<td>3:30 PM-8:30 PM</td>
+						<td>3:30 PM-8:30 PM</td>
+						<td>3:30 PM-8:30 PM</td>
+						<td>3:30 PM-8:30 PM</td>
+						<td>3:30 PM-8:30 PM</td>
+						<td>3:30 PM-8:30 PM</td>
+						<td><center>On Appointment</center></td>
+					</tr>
+				</table>
+				<div class="timing-option" >
+					<a  class="timing-options" href="#appointment">Take an Appointment</a>
+				</div>
+			</div>
+		</section>
+		<section id="gallery" class="gallery">
+			<h1>Our <span style="color:#990033;">Hair Gallery</span></h1>
+			<div class="gallery-img" >
+				<img id="img1" src="parlour/gallery1.jpg" alt="Hairstyle" title="Hairstyle done in Betty's Beauty Salon and Spa" >
+				<img id="img2" src="parlour/gallery2.jpg" alt="Hairstyle" title="best Bridal Makeup done in Goa ">
+				<img id="img3" src="parlour/gallery3.jpg" alt="Hairstyle" title="Hairstyles by best hairstylists">
+				<img id="img4" src="parlour/gallery4.jpg" alt="Hairstyle" title="Hairstyles only at betty's beauty salon and spa">
+				<img id="img5" src="parlour/gallery5.jpg" alt="Hairstyle" title="best Hairstyles">
+				<img id="img6" src="parlour/gallery6.jpg" alt="Hairstyle" title="Hairstyles with good products">
+			</div>
+		</section>
+		<section id="img_modal" class="modal">
+			<span id="prevImg" class="swipeImg" >&#10094;</span>
+			<span id="nextImg" class="swipeImg" >&#10095;</span>
+			<div class="img-zoom">
+				<img id= "img" style="height:500px; width 500px;">
+			</div>
+		</section>
+			<script src="parlour/script.js"></script>
+			
+		<section class="contact" id="contact">
+			<div>
+				<iframe alt="Google Maps" title="Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3850.560448420335!2d73.96903791415899!3d15.1824654666238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe4cc4cd4c031d%3A0xaf5a6e5392d2a22a!2sBetty&#39;s+Beauty+Salon+%26Spa!5e0!3m2!1sen!2sin!4v1563594674354!5m2!1sen!2sin" width="350" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<h1><span style="color:#990033;">Contact</span> us</h1>
+				<h3>Betty's Beauty Salon & Spa</h3>
+				<p class="address" >Shop No-41/A<br>Orel, Assolna<br>Margao, Salcette<br>Goa-403701</p>
+				<p class="c_details">
+					<a href="mailto: bettyrodrigues1970@gmail.com" style="text-decoration: none;"><img src="parlour/gmail-icon.jpg" alt="Gmail" title="Gmail" height="15px"; width="20px;">bettyrodrigues1970@gmail.com</a><br>
+					<a href="https://www.instagram.com/bettysbeautysalonandspa" style="text-decoration: none;"><img src="parlour/insta-logo.jpg" alt="Instagram" title="Instagram" height="20px"; width="20px;">bettysbeautysalonandspa</a><br>
+					<a href="https://www.facebook.com/Bettyrodrigues09/" style="text-decoration: none;"><img src="parlour/fb-logo.jpg" alt="Facebook" title="Facebook" height="20px"; width="20px;" >Betty's Beauty Salon & Spa</a><br>
+					<a href="tel:08322773233" style="text-decoration: none;"><img src="parlour/phone-icon.jpg" alt="Phone Number" title="Phone Number" height="18px"; width="20px;">0832-2773113</a>&nbsp;
+					<a href="https://wa.me/0918390750135" style="text-decoration: none;"><img src="parlour/whatsapp-logo.jpg" alt="Whatsapp Number" title="Whatsapp Number" height="20px"; width="20px;" >+91 8390750135</a>
+				</p>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<p>Designed by Brendon</p>
+		</footer>
+	</body>	
+</html>
