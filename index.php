@@ -1,7 +1,7 @@
 <?php
     include_once("index.html");
     include_once("database.php");
-    if(isset($_POST['save']))
+    if(isset($_POST['formSubmit']))
     {	 
          $first_name = $_POST['formName'];
          $mobile_no = $_POST['mobile-no'];
