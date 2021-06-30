@@ -4,7 +4,7 @@
     if(isset($_POST['save']))
     {	 
          $first_name = $_POST['formName'];
-         $mobile_no = $_POST['mobileno'];
+         $mobile_no = $_POST['mobile-no'];
          $query = "INSERT INTO appointment(name,mobileno) 
          values ('$formName','$mobile_no')";
          if($result = pg_query($query)){
