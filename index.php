@@ -6,7 +6,7 @@
          $first_name = $_POST['formName'];
          $mobile_no = $_POST['mobile-no'];
          $query = "INSERT INTO appointment(name,mobileno) 
-         values ('$formName','$mobile_no')";
+         values ('$first_name','$mobile_no')";
          if($result = pg_query($query)){
             echo "Data Added Successfully.";
          }
